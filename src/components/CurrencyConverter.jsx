@@ -36,7 +36,7 @@ function CurrencyConverter() {
         />
         <p>{fromCurrency}</p>
         <p className="equal-sign">=</p>
-        <p className="converter-result">{amount === "" ? "0" : output}</p>
+        <p className="converter-result">{amount === "" || isNaN(amount) || Number(amount) < 0 ? "0" : output}</p>
         <p>{toCurrency}</p>
       </div>
     </>
